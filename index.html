@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Amazon</title>
+<style>
+    body {
+        background-color: #f8f8f8;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    header {
+        background-color: #e47911;
+        padding: 10px;
+        color: white;
+        text-align: center;
+    }
+
+    nav a {
+        margin: 0 10px;
+        text-decoration: none;
+        color: white;
+    }
+
+    main {
+        padding: 20px;
+    }
+
+    footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 10px;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+</style>
+</head>
+<body>
+<header>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Products</a>
+        <a href="#">About</a>
+        <a href="#" style="float: right;">Sign In</a>
+        <a href="#" style="float: right;">Cart</a>
+    </nav>
+</header>
+
+<main>
+    <h2>Featured Product</h2>
+    <div class="product">
+        <img src="product.jpg" alt="Product Image" width="200">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse euismod turpis eget ante consectetur.</p>
+        <p>Price: $99.99</p>
+        <button>Add to Cart</button>
+    </div>
+</main>
+
+<footer>
+    &copy; 2021 Amazon.com. All Rights Reserved.
+</footer>
+
+<script>
+    function submitForm() {
+        var name = document.getElementById('name').value;
+        var email = document.getElementById('email').value;
+        alert('Form submitted successfully! Name: ' + name + ' Email: ' + email);
+    }
+</script>
+
+<div class="form">
+    <h2>Contact Us</h2>
+    <form onsubmit="event.preventDefault(); submitForm();">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required><br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" required><br><br>
+        <input type="submit" value="Submit">
+    </form>
+</div>
+</body>
+</html>
